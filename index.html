@@ -6,221 +6,238 @@
 <title>布達佩斯之旅 · 2026 · 上海中轉指南</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Italiana&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #F4ECD8;
-    --paper-deep: #EDE2C7;
-    --paper-soft: #FAF5E8;
-    --ink: #1A1411;
-    --ink-soft: #3A2F25;
-    --ink-mute: #6B5D4A;
-    --rule: #C9B68F;
-    --rule-soft: #DDCEAA;
-    --danube: #1E3A5F;
-    --danube-deep: #0F2440;
-    --danube-soft: #5B7896;
-    --amber: #C68A2F;
-    --amber-deep: #9C6A1F;
-    --amber-soft: #E5B968;
-    --lantern: #B83A2D;
-    --lantern-deep: #8B2419;
-    --jade: #4F6E5C;
-    --gold: #B8932A;
-    --shadow-soft: 0 1px 2px rgba(26,20,17,.04), 0 8px 24px -8px rgba(26,20,17,.08);
-    --shadow-card: 0 1px 3px rgba(26,20,17,.06), 0 12px 32px -12px rgba(26,20,17,.12);
-    --shadow-deep: 0 2px 4px rgba(26,20,17,.08), 0 20px 60px -20px rgba(26,20,17,.2);
+    /* Color palette - Danube blues + Budapest amber + Shanghai red lantern */
+    --paper: #FAF7F1;
+    --paper-warm: #F5EFE3;
+    --paper-deep: #EDE5D3;
+    --ink: #1F1A14;
+    --ink-soft: #3D352A;
+    --ink-mute: #7A6F5E;
+    --rule: #D6CAB0;
+    --rule-soft: #E5DCC4;
+
+    --danube: #1F4068;
+    --danube-deep: #122A47;
+    --danube-light: #4A6D94;
+    --amber: #B8821A;
+    --amber-deep: #8A5F0E;
+    --amber-soft: #DDA736;
+    --lantern: #A8362A;
+    --lantern-deep: #7A2218;
+    --jade: #4A6B58;
+
+    --shadow-sm: 0 1px 2px rgba(31,26,20,.04);
+    --shadow-md: 0 1px 3px rgba(31,26,20,.06), 0 10px 24px -10px rgba(31,26,20,.1);
+    --shadow-lg: 0 2px 4px rgba(31,26,20,.08), 0 24px 48px -16px rgba(31,26,20,.16);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  *::selection { background: var(--lantern); color: var(--paper-soft); }
-
+  *::selection { background: var(--lantern); color: var(--paper); }
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Manrope', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
     background: var(--paper);
-    color: var(--ink);
+    color: var(--ink-soft);
     line-height: 1.7;
     font-weight: 400;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    background-image:
-      radial-gradient(at 12% 8%, rgba(198,138,47,.06) 0, transparent 50%),
-      radial-gradient(at 88% 92%, rgba(30,58,95,.05) 0, transparent 50%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    text-rendering: optimizeLegibility;
   }
 
-  /* Typography */
-  .display { font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
-  .display-italic { font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif; font-style: italic; font-weight: 400; }
-  .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; letter-spacing: 0.02em; }
-  .number { font-family: 'Italiana', 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: 0.02em; }
+  /* Typography utility classes */
+  .serif { font-family: 'Fraunces', 'Noto Serif TC', Georgia, serif; }
+  .sans { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+
   .label {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     font-weight: 500;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--ink-mute);
   }
 
-  .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
 
-  /* — — — HERO — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━ */
   .hero {
     min-height: 100vh;
-    padding: 60px 28px 80px;
-    position: relative;
+    padding: 50px 0 70px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-bottom: 1px solid var(--rule);
+    position: relative;
   }
   .hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: var(--rule);
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 5%, rgba(184, 130, 26, 0.08) 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 95%, rgba(31, 64, 104, 0.06) 0%, transparent 45%);
+    pointer-events: none;
   }
+
   .hero-top {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 24px;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     border-bottom: 1px solid var(--rule);
   }
-  .hero-issue { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; color: var(--ink-mute); }
-  .hero-mark {
-    font-family: 'Italiana', serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.3em;
-    color: var(--lantern);
-    text-align: center;
+  .hero-issue, .hero-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
   }
-  .hero-date { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.18em; color: var(--ink-mute); text-align: right; }
+  .hero-date { text-align: right; }
+  .hero-mark {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--lantern);
+    letter-spacing: 0.1em;
+  }
 
   .hero-body {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 0;
+    padding: 70px 0;
     text-align: center;
     position: relative;
+    z-index: 1;
   }
   .hero-eyebrow {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.32em;
     font-size: 0.7rem;
     color: var(--amber-deep);
-    margin-bottom: 28px;
+    margin-bottom: 36px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
   .hero-eyebrow::before, .hero-eyebrow::after {
     content: '';
-    display: inline-block;
-    width: 30px;
+    width: 36px;
     height: 1px;
     background: var(--amber-deep);
-    vertical-align: middle;
-    margin: 0 16px;
   }
   .hero-title {
-    font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(3.2rem, 9vw, 7.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.025em;
+    font-family: 'Fraunces', 'Noto Serif TC', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(3rem, 8.5vw, 6.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
     color: var(--ink);
-    margin-bottom: 8px;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
   }
   .hero-title em {
     font-style: italic;
     color: var(--lantern);
     font-weight: 400;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
   }
   .hero-subtitle {
-    font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+    font-family: 'Fraunces', 'Noto Serif TC', Georgia, serif;
     font-style: italic;
     font-weight: 300;
-    font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
     color: var(--ink-soft);
-    margin-top: 16px;
-    letter-spacing: 0.01em;
+    margin-top: 22px;
+    line-height: 1.5;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   .hero-route {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
     margin-top: 50px;
     flex-wrap: wrap;
   }
-  .route-node {
-    text-align: center;
-  }
+  .route-node { text-align: center; }
   .route-code {
-    font-family: 'Italiana', serif;
-    font-size: 2.2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 2rem;
     color: var(--ink);
-    letter-spacing: 0.05em;
     line-height: 1;
+    letter-spacing: 0.04em;
   }
   .route-city {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.7rem;
     color: var(--ink-mute);
     margin-top: 8px;
+    font-weight: 500;
   }
   .route-arrow {
-    font-family: 'Italiana', serif;
     color: var(--amber-deep);
-    font-size: 1.4rem;
-    opacity: 0.7;
+    font-size: 1.2rem;
+    opacity: 0.6;
   }
 
   .hero-summary {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
   .stat {
-    padding: 28px 20px;
+    padding: 26px 16px;
     text-align: center;
     border-right: 1px solid var(--rule);
-    position: relative;
   }
   .stat:last-child { border-right: none; }
   .stat-num {
-    font-family: 'Italiana', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
     color: var(--ink);
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-variation-settings: "opsz" 72;
   }
   .stat-num.accent { color: var(--lantern); }
   .stat-label {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    font-size: 0.68rem;
     color: var(--ink-mute);
     line-height: 1.5;
+    font-weight: 500;
   }
 
-  /* — — — NAV — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━━━━━━━ */
   .nav-bar {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(244, 236, 216, 0.92);
+    background: rgba(250, 247, 241, 0.94);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--rule);
@@ -229,101 +246,109 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 0;
+    gap: 4px;
+    padding: 12px 0;
     flex-wrap: wrap;
   }
   .nav-link {
-    font-family: 'Manrope', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.68rem;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    font-size: 0.85rem;
     color: var(--ink-soft);
     text-decoration: none;
-    padding: 6px 14px;
-    border: 1px solid transparent;
+    padding: 8px 16px;
     border-radius: 100px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
   .nav-link:hover {
-    border-color: var(--ink);
-    color: var(--ink);
+    background: var(--ink);
+    color: var(--paper);
   }
   .nav-link .nav-num {
-    font-family: 'Italiana', serif;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
     color: var(--lantern);
-    margin-right: 6px;
-    font-size: 0.85rem;
-    letter-spacing: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
   }
+  .nav-link:hover .nav-num { color: var(--amber-soft); }
 
-  /* — — — SECTION — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ SECTION ━━━━━━━━━━━━━━━━━━━━━━ */
   section {
     padding: 100px 0;
     border-bottom: 1px solid var(--rule);
-    position: relative;
   }
   .section-header {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 40px;
+    gap: 48px;
     align-items: baseline;
-    margin-bottom: 60px;
-    padding-bottom: 24px;
+    margin-bottom: 56px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--rule-soft);
   }
   .section-num {
-    font-family: 'Italiana', serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(3rem, 6.5vw, 5rem);
     color: var(--lantern);
     line-height: 0.9;
-    letter-spacing: 0;
+    font-variation-settings: "opsz" 144;
   }
-  .section-meta {
-    padding-top: 16px;
-  }
+  .section-meta { padding-top: 12px; }
   .section-kicker {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.28em;
     font-size: 0.68rem;
     color: var(--amber-deep);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-weight: 600;
   }
   .section-title {
-    font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(2rem, 4.5vw, 3.4rem);
-    line-height: 1.05;
+    font-family: 'Fraunces', 'Noto Serif TC', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+    line-height: 1.1;
     color: var(--ink);
     letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 144;
   }
-  .section-title em { font-style: italic; color: var(--lantern); font-weight: 400; }
-  .section-lede {
-    font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  .section-title em {
     font-style: italic;
-    font-size: 1.2rem;
+    color: var(--lantern);
+    font-weight: 400;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .section-lede {
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.15rem;
     color: var(--ink-soft);
-    margin-top: 14px;
-    max-width: 580px;
-    line-height: 1.5;
+    margin-top: 16px;
+    max-width: 600px;
+    line-height: 1.6;
   }
 
   h3 {
-    font-family: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+    font-family: 'Fraunces', 'Noto Serif TC', Georgia, serif;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     color: var(--ink);
-    margin: 40px 0 18px;
-    letter-spacing: -0.005em;
+    margin: 42px 0 18px;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 72;
   }
   h3.with-rule {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
   }
   h3.with-rule::after {
     content: '';
@@ -332,43 +357,49 @@
     background: var(--rule-soft);
   }
   h4 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--danube);
-    margin: 28px 0 12px;
+    margin: 28px 0 14px;
   }
 
   p { margin-bottom: 14px; color: var(--ink-soft); }
 
-  /* — — — TICKET CARDS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ TICKET CARDS ━━━━━━━━━━━━━━━━━━━━━━ */
   .ticket {
-    background: var(--paper-soft);
+    background: var(--paper-warm);
     border: 1px solid var(--rule);
     border-radius: 4px;
-    padding: 32px;
-    margin-bottom: 20px;
+    padding: 28px 36px;
+    margin-bottom: 16px;
     position: relative;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-md);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .ticket:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
   }
   .ticket::before, .ticket::after {
     content: '';
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: var(--paper);
     top: 50%;
     transform: translateY(-50%);
   }
-  .ticket::before { left: -9px; box-shadow: inset 1px 0 0 var(--rule); }
-  .ticket::after { right: -9px; box-shadow: inset -1px 0 0 var(--rule); }
+  .ticket::before { left: -10px; box-shadow: inset 1px 0 0 var(--rule); }
+  .ticket::after { right: -10px; box-shadow: inset -1px 0 0 var(--rule); }
+
   .ticket-stub {
     border-right: 1px dashed var(--rule);
     padding-right: 24px;
@@ -376,22 +407,37 @@
   .ticket-stub:last-child { border-right: none; padding-right: 0; }
   .ticket-pnr {
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: var(--ink);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
   }
-  .ticket-meta { font-size: 0.85rem; color: var(--ink-mute); margin-top: 6px; }
+  .ticket-meta {
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+    margin-top: 8px;
+  }
   .ticket-amount {
-    font-family: 'Italiana', serif;
-    font-size: 1.8rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
     color: var(--ink);
     text-align: right;
+    font-variation-settings: "opsz" 72;
   }
-  .ticket-amount small { font-size: 0.65rem; color: var(--ink-mute); letter-spacing: 0.2em; text-transform: uppercase; display: block; }
+  .ticket-amount small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
 
   .total-line {
-    margin-top: 28px;
+    margin-top: 32px;
     padding-top: 28px;
     border-top: 2px solid var(--ink);
     display: flex;
@@ -399,48 +445,57 @@
     align-items: baseline;
   }
   .total-line .total-label {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
     font-style: italic;
-    font-size: 1.4rem;
+    font-weight: 400;
+    font-size: 1.3rem;
     color: var(--ink);
   }
   .total-line .total-value {
-    font-family: 'Italiana', serif;
-    font-size: 2.6rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 2.4rem;
     color: var(--lantern);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 144;
   }
 
-  /* — — — FLIGHT CARDS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ FLIGHT CARDS ━━━━━━━━━━━━━━━━━━━━━━ */
   .flight {
-    background: var(--paper-soft);
+    background: var(--paper-warm);
     border: 1px solid var(--rule);
+    border-radius: 4px;
     padding: 28px 32px;
-    margin-bottom: 16px;
-    position: relative;
-    box-shadow: var(--shadow-soft);
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .flight:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
   }
   .flight-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
     border-bottom: 1px dashed var(--rule);
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     flex-wrap: wrap;
     gap: 12px;
   }
   .flight-code {
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
     color: var(--danube);
   }
   .flight-route-text {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
     font-style: italic;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.15rem;
     color: var(--ink-soft);
   }
   .flight-body {
@@ -449,58 +504,69 @@
     gap: 24px;
     align-items: center;
   }
-  .flight-time-block {
-    text-align: center;
-  }
+  .flight-time-block { text-align: center; }
   .flight-time-block .flight-time {
-    font-family: 'Italiana', serif;
-    font-size: 2.6rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 2.4rem;
     color: var(--ink);
     line-height: 1;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 144;
   }
   .flight-time-block .flight-airport {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
     color: var(--ink-mute);
     margin-top: 10px;
+    font-weight: 500;
   }
   .flight-arrow {
     color: var(--amber-deep);
-    position: relative;
     text-align: center;
   }
   .flight-arrow svg { display: block; margin: 0 auto; }
   .flight-arrow .duration {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     letter-spacing: 0.1em;
     color: var(--ink-mute);
     margin-top: 6px;
+    font-weight: 500;
   }
 
   .layover {
-    background: linear-gradient(to right, transparent 0%, var(--amber-soft) 50%, transparent 100%);
-    background-size: 8px 1px;
-    background-repeat: repeat-x;
-    background-position: 0 50%;
-    padding: 12px 24px;
-    margin: 8px 0;
     text-align: center;
+    margin: 10px 0;
+    position: relative;
+  }
+  .layover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--amber-soft);
+    background-image: linear-gradient(to right, transparent 0, transparent 6px, var(--amber-soft) 6px, var(--amber-soft) 9px);
+    background-size: 15px 1px;
+    background-repeat: repeat-x;
   }
   .layover-inner {
+    position: relative;
     background: var(--paper);
     display: inline-block;
-    padding: 4px 20px;
-    font-family: 'Cormorant Garamond', serif;
+    padding: 6px 22px;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
     font-style: italic;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.05rem;
     color: var(--amber-deep);
   }
 
-  /* — — — TABLES — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ TABLES ━━━━━━━━━━━━━━━━━━━━━━ */
   .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -510,10 +576,10 @@
     text-align: left;
     padding: 14px 16px;
     border-bottom: 2px solid var(--ink);
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
     color: var(--ink);
     font-weight: 600;
   }
@@ -523,49 +589,53 @@
     font-size: 0.94rem;
     color: var(--ink-soft);
   }
-  .data-table tr:hover td { background: rgba(198, 138, 47, 0.04); }
+  .data-table tr:hover td { background: rgba(184, 130, 26, 0.04); }
   .data-table .check {
-    font-family: 'Italiana', serif;
+    font-family: 'Fraunces', serif;
     color: var(--jade);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
+    font-weight: 500;
   }
   .data-table .warn {
     color: var(--amber-deep);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
+    font-weight: 600;
   }
 
-  /* — — — BADGES — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ BADGES ━━━━━━━━━━━━━━━━━━━━━━ */
   .badge {
     display: inline-block;
     padding: 4px 12px;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     font-size: 0.65rem;
     font-weight: 600;
-    border-radius: 2px;
+    border-radius: 100px;
+    vertical-align: middle;
   }
-  .badge-go { background: var(--danube); color: var(--paper-soft); }
-  .badge-back { background: var(--jade); color: var(--paper-soft); }
-  .badge-warn { background: var(--amber); color: var(--paper-soft); }
-  .badge-success { background: var(--jade); color: var(--paper-soft); }
-  .badge-danger { background: var(--lantern); color: var(--paper-soft); }
+  .badge-go { background: var(--danube); color: var(--paper); }
+  .badge-back { background: var(--jade); color: var(--paper); }
+  .badge-warn { background: var(--amber); color: var(--paper); }
+  .badge-success { background: var(--jade); color: var(--paper); }
+  .badge-danger { background: var(--lantern); color: var(--paper); }
 
-  /* — — — ALERTS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ ALERTS ━━━━━━━━━━━━━━━━━━━━━━ */
   .alert {
     padding: 22px 28px;
-    margin: 24px 0;
+    margin: 22px 0;
     border-left: 3px solid;
-    background: var(--paper-soft);
-    position: relative;
-    box-shadow: var(--shadow-soft);
+    background: var(--paper-warm);
+    border-radius: 0 4px 4px 0;
+    box-shadow: var(--shadow-sm);
   }
   .alert-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
     font-style: italic;
-    font-size: 1.15rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     margin-bottom: 6px;
   }
   .alert-info { border-color: var(--danube); }
@@ -576,8 +646,10 @@
   .alert-success .alert-title { color: var(--jade); }
   .alert-danger { border-color: var(--lantern); }
   .alert-danger .alert-title { color: var(--lantern); }
+  .alert ul { margin-top: 8px; padding-left: 22px; }
+  .alert li { font-size: 0.94rem; margin-bottom: 4px; }
 
-  /* — — — TIMELINE — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ TIMELINE ━━━━━━━━━━━━━━━━━━━━━━ */
   .timeline {
     margin: 30px 0;
     position: relative;
@@ -587,23 +659,22 @@
     content: '';
     position: absolute;
     left: 8px;
-    top: 8px;
-    bottom: 8px;
+    top: 10px;
+    bottom: 10px;
     width: 1px;
     background: var(--rule);
   }
   .timeline-item {
     position: relative;
-    margin-bottom: 28px;
-    padding-left: 8px;
+    margin-bottom: 26px;
   }
   .timeline-item::before {
     content: '';
     position: absolute;
     left: -36px;
     top: 8px;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     background: var(--paper);
     border: 2px solid var(--lantern);
     border-radius: 50%;
@@ -611,96 +682,122 @@
   .timeline-item.highlight::before { background: var(--lantern); }
   .timeline-time {
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.85rem;
     color: var(--lantern);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     margin-bottom: 4px;
   }
-  .timeline-text { font-size: 0.96rem; color: var(--ink-soft); }
-  .timeline-text strong { color: var(--ink); }
+  .timeline-text {
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .timeline-text strong { color: var(--ink); font-weight: 600; }
 
-  /* — — — CHECKLIST — — — */
-  .checklist { list-style: none; padding: 0; }
+  /* ━━━━━━━━━━━━━━━━━━━━━━ CHECKLIST ━━━━━━━━━━━━━━━━━━━━━━ */
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
   .checklist li {
     padding: 14px 0 14px 36px;
     position: relative;
     border-bottom: 1px solid var(--rule-soft);
     color: var(--ink-soft);
+    font-size: 0.96rem;
   }
   .checklist li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 18px;
+    top: 17px;
     width: 16px;
     height: 16px;
     border: 1.5px solid var(--ink-mute);
-    border-radius: 2px;
-    background: var(--paper-soft);
+    border-radius: 3px;
+    background: transparent;
+    transition: all 0.2s ease;
   }
-  .checklist li:hover::before { border-color: var(--lantern); }
+  .checklist li:hover::before { border-color: var(--lantern); background: rgba(168, 54, 42, 0.06); }
+  .checklist li strong { color: var(--ink); font-weight: 600; }
 
-  /* — — — GRIDS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ GRIDS ━━━━━━━━━━━━━━━━━━━━━━ */
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+    gap: 24px;
     margin: 24px 0;
   }
   .grid-card {
-    background: var(--paper-soft);
+    background: var(--paper-warm);
     border: 1px solid var(--rule);
+    border-radius: 4px;
     padding: 28px;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-sm);
   }
   .grid-card h4 { margin-top: 0; }
   .grid-card ol, .grid-card ul { padding-left: 20px; margin-top: 12px; }
-  .grid-card li { margin-bottom: 8px; font-size: 0.94rem; color: var(--ink-soft); }
+  .grid-card li { margin-bottom: 8px; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; }
 
-  /* — — — LOUNGE ROOMS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ LOUNGE CARDS ━━━━━━━━━━━━━━━━━━━━━━ */
   .lounge-card {
     border: 1px solid var(--rule);
-    background: var(--paper-soft);
+    background: var(--paper-warm);
+    border-radius: 4px;
     padding: 32px;
-    margin-bottom: 16px;
-    box-shadow: var(--shadow-soft);
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-md);
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 28px;
+    gap: 32px;
     align-items: center;
   }
   .lounge-num {
-    font-family: 'Italiana', serif;
-    font-size: 3.4rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 3rem;
     color: var(--lantern);
     line-height: 1;
     border-right: 1px solid var(--rule);
-    padding-right: 28px;
+    padding-right: 32px;
+    font-variation-settings: "opsz" 144;
   }
   .lounge-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
+    font-weight: 500;
+    font-size: 1.35rem;
     color: var(--ink);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 72;
+  }
+  .lounge-name em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-mute);
+    font-size: 0.95rem;
   }
   .lounge-loc {
-    font-family: 'Manrope', sans-serif;
-    font-size: 0.84rem;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    font-size: 0.82rem;
     color: var(--ink-mute);
     text-transform: uppercase;
     letter-spacing: 0.12em;
+    font-weight: 500;
   }
   .lounge-hours {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--danube);
-    font-weight: 500;
+    font-weight: 600;
     text-align: right;
+    letter-spacing: 0.02em;
   }
   .lounge-hours small {
     display: block;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.65rem;
     color: var(--ink-mute);
     letter-spacing: 0.18em;
@@ -709,13 +806,14 @@
     font-weight: 500;
   }
 
-  /* — — — CONTACT — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━ */
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0;
     border: 1px solid var(--rule);
-    background: var(--paper-soft);
+    background: var(--paper-warm);
+    border-radius: 4px;
+    overflow: hidden;
   }
   .contact-cell {
     padding: 28px;
@@ -725,7 +823,7 @@
   .contact-cell:last-child { border-right: none; }
   .contact-cell h4 {
     color: var(--lantern);
-    margin: 0 0 12px;
+    margin: 0 0 14px;
     font-size: 0.72rem;
   }
   .contact-cell p {
@@ -733,70 +831,73 @@
     font-size: 0.88rem;
     margin-bottom: 6px;
     color: var(--ink);
+    letter-spacing: 0.02em;
   }
 
-  a { color: var(--lantern); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  a {
+    color: var(--lantern);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
   a:hover { border-color: var(--lantern); }
 
-  /* — — — FOOTER — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━ */
   footer {
     background: var(--ink);
     color: var(--paper);
-    padding: 60px 28px;
+    padding: 70px 28px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 0;
   }
   footer .colophon {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Fraunces', 'Noto Serif TC', serif;
     font-style: italic;
+    font-weight: 300;
     font-size: 1.4rem;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     color: var(--amber-soft);
-  }
-  footer .credit {
-    font-family: 'Manrope', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.7rem;
-    color: var(--paper);
-    opacity: 0.6;
-    margin-top: 24px;
+    font-variation-settings: "opsz" 72;
+    line-height: 1.5;
   }
   footer .divider {
     width: 60px;
     height: 1px;
     background: var(--amber);
-    margin: 24px auto;
+    margin: 20px auto;
+    opacity: 0.7;
+  }
+  footer .colophon-meta {
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+  }
+  footer .credit {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.65rem;
+    opacity: 0.5;
+    margin-top: 24px;
+    font-weight: 500;
   }
 
-  /* — — — ANIMATIONS — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ ANIMATIONS ━━━━━━━━━━━━━━━━━━━━━━ */
   @keyframes fadeRise {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hero-body > * { animation: fadeRise 1s ease forwards; opacity: 0; }
+  .hero-body > * { animation: fadeRise 0.9s ease forwards; opacity: 0; }
   .hero-body > *:nth-child(1) { animation-delay: 0.1s; }
-  .hero-body > *:nth-child(2) { animation-delay: 0.3s; }
-  .hero-body > *:nth-child(3) { animation-delay: 0.5s; }
-  .hero-body > *:nth-child(4) { animation-delay: 0.7s; }
+  .hero-body > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-body > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-body > *:nth-child(4) { animation-delay: 0.55s; }
 
-  @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-  .hero-title em {
-    background: linear-gradient(90deg, var(--lantern) 0%, var(--amber) 50%, var(--lantern) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 6s ease-in-out infinite;
-  }
-
-  /* — — — RESPONSIVE — — — */
+  /* ━━━━━━━━━━━━━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━━━━━━━━━━━━━ */
   @media (max-width: 768px) {
-    .hero { padding: 30px 20px 50px; }
-    .hero-top { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+    .hero { padding: 30px 0 50px; }
+    .hero-top { grid-template-columns: 1fr; gap: 10px; text-align: center; }
     .hero-issue, .hero-date { text-align: center; }
     .hero-body { padding: 40px 0; }
     .hero-summary { grid-template-columns: repeat(2, 1fr); }
@@ -806,51 +907,52 @@
     .stat:nth-last-child(-n+2) { border-bottom: none; }
     .container { padding: 0 20px; }
     section { padding: 60px 0; }
-    .section-header { grid-template-columns: 1fr; gap: 16px; }
+    .section-header { grid-template-columns: 1fr; gap: 12px; }
     .ticket { grid-template-columns: 1fr; padding: 24px; gap: 16px; }
     .ticket-stub { border-right: none; border-bottom: 1px dashed var(--rule); padding-right: 0; padding-bottom: 16px; }
     .ticket-amount { text-align: left; }
     .flight-body { grid-template-columns: 1fr; }
-    .flight-arrow { transform: rotate(90deg); padding: 16px 0; }
-    .lounge-card { grid-template-columns: 1fr; gap: 16px; text-align: center; }
-    .lounge-num { border-right: none; padding-right: 0; border-bottom: 1px solid var(--rule); padding-bottom: 16px; }
+    .flight-arrow { transform: rotate(90deg); padding: 14px 0; }
+    .lounge-card { grid-template-columns: 1fr; gap: 18px; text-align: center; }
+    .lounge-num { border-right: none; border-bottom: 1px solid var(--rule); padding-right: 0; padding-bottom: 16px; }
     .lounge-hours { text-align: center; }
-    .hero-route { gap: 12px; }
+    .hero-route { gap: 14px; }
     .route-arrow { display: none; }
+    .total-line { flex-direction: column; align-items: flex-start; gap: 8px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━ -->
 <header class="hero">
-  <div class="hero-top container">
-    <div class="hero-issue">VOL. I &middot; ISSUE 01</div>
-    <div class="hero-mark">✦ ✦ ✦</div>
-    <div class="hero-date">MMXXVI &middot; SUMMER</div>
+  <div class="container hero-top">
+    <div class="hero-issue">VOL. 01 · ISSUE 2026</div>
+    <div class="hero-mark">— A Travel Companion —</div>
+    <div class="hero-date">Summer · MMXXVI</div>
   </div>
 
-  <div class="hero-body container">
-    <div class="hero-eyebrow">A Family Voyage — 8 Travellers</div>
+  <div class="container hero-body">
+    <div class="hero-eyebrow">A Family Voyage · 8 Travellers</div>
     <h1 class="hero-title">
       Budapest<br>
       <em>by way of Shanghai</em>
     </h1>
     <p class="hero-subtitle">
-      A travel companion for our crossing of two great rivers —<br>
-      the Danube and the Huangpu
+      一段橫渡兩座大河的家庭旅行 ——<br>
+      多瑙河與黃浦江之間，八位旅人的指南
     </p>
     <div class="hero-route">
       <div class="route-node">
         <div class="route-code">TPE</div>
         <div class="route-city">Taipei</div>
       </div>
-      <div class="route-arrow">⤳</div>
+      <div class="route-arrow">→</div>
       <div class="route-node">
         <div class="route-code">PVG</div>
         <div class="route-city">Shanghai</div>
       </div>
-      <div class="route-arrow">⤳</div>
+      <div class="route-arrow">→</div>
       <div class="route-node">
         <div class="route-code">BUD</div>
         <div class="route-city">Budapest</div>
@@ -858,10 +960,10 @@
     </div>
   </div>
 
-  <div class="hero-summary container">
+  <div class="container hero-summary">
     <div class="stat">
       <div class="stat-num">8</div>
-      <div class="stat-label">同行人數 · 6+2</div>
+      <div class="stat-label">同行人數<br>6+2</div>
     </div>
     <div class="stat">
       <div class="stat-num">3</div>
@@ -872,13 +974,13 @@
       <div class="stat-label">TWD 總額</div>
     </div>
     <div class="stat">
-      <div class="stat-num">06·27</div>
+      <div class="stat-num">06.27</div>
       <div class="stat-label">啟程之日</div>
     </div>
   </div>
 </header>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━━━━━━━ -->
 <nav class="nav-bar">
   <div class="container nav-inner">
     <a href="#tickets" class="nav-link"><span class="nav-num">I</span>機票</a>
@@ -890,18 +992,18 @@
   </div>
 </nav>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ TICKETS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ TICKETS ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="tickets">
   <div class="container">
     <header class="section-header">
       <div class="section-num">I.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter One — The Reservation</div>
+        <div class="section-kicker">Chapter One · The Reservation</div>
         <h2 class="section-title">機票訂單 <em>Tickets</em></h2>
         <p class="section-lede">
-          三張票，八個人，一段旅程 — 透過 Trip.com 訂票，
+          三張票、八個人、一段旅程 — 透過 Trip.com 訂購，
           票本 781 開頭，符合東航中轉權益條件。
-          <br><small style="color:var(--ink-mute);font-style:normal;">PNR 與訂單編號已遮蔽以保護隱私</small>
+          <br><small style="color:var(--ink-mute);font-style:normal;font-family:Inter,sans-serif;">PNR 與訂單編號已遮蔽以保護隱私</small>
         </p>
       </div>
     </header>
@@ -913,7 +1015,7 @@
       </div>
       <div class="ticket-stub">
         <div class="label">訂購日</div>
-        <div class="number" style="font-size:1.4rem;color:var(--ink);margin-top:6px;">2026 · 05 · 20</div>
+        <div class="serif" style="font-size:1.4rem;color:var(--ink);margin-top:6px;font-weight:500;">2026.05.20</div>
       </div>
       <div class="ticket-amount">
         <small>實付</small>
@@ -928,7 +1030,7 @@
       </div>
       <div class="ticket-stub">
         <div class="label">訂購日</div>
-        <div class="number" style="font-size:1.4rem;color:var(--ink);margin-top:6px;">2026 · 05 · 22</div>
+        <div class="serif" style="font-size:1.4rem;color:var(--ink);margin-top:6px;font-weight:500;">2026.05.22</div>
       </div>
       <div class="ticket-amount">
         <small>實付（折 94）</small>
@@ -943,7 +1045,7 @@
       </div>
       <div class="ticket-stub">
         <div class="label">訂購日</div>
-        <div class="number" style="font-size:1.4rem;color:var(--ink);margin-top:6px;">2026 · 05 · 25</div>
+        <div class="serif" style="font-size:1.4rem;color:var(--ink);margin-top:6px;font-weight:500;">2026.05.25</div>
       </div>
       <div class="ticket-amount">
         <small>實付</small>
@@ -952,7 +1054,7 @@
     </div>
 
     <div class="total-line">
-      <span class="total-label">Total &middot; 合計</span>
+      <span class="total-label">Total · 合計</span>
       <span class="total-value">TWD 170,164</span>
     </div>
 
@@ -963,27 +1065,27 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ FLIGHTS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ FLIGHTS ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="flights">
   <div class="container">
     <header class="section-header">
       <div class="section-num">II.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter Two — The Itinerary</div>
+        <div class="section-kicker">Chapter Two · The Itinerary</div>
         <h2 class="section-title">航班時刻 <em>Flights</em></h2>
         <p class="section-lede">
-          四個航段，跨越歐亞，一張行李標籤直送布達佩斯 —
-          中國東方航空 MU 與上海航空 FM 共同營運。
+          四個航段，跨越歐亞 — 中國東方航空 MU 與上海航空 FM 共同營運，
+          行李一張標籤直達布達佩斯。
         </p>
       </div>
     </header>
 
-    <h3 class="with-rule">去程 <span class="badge badge-go" style="font-size:0.6rem;">2026 · 06 · 27 → 06 · 28</span></h3>
+    <h3 class="with-rule">去程 <span class="badge badge-go">2026.06.27 → 06.28</span></h3>
 
     <div class="flight">
       <div class="flight-header">
         <div class="flight-code">MU 5008</div>
-        <div class="flight-route-text">台北 — 上海浦東</div>
+        <div class="flight-route-text">台北 → 上海浦東</div>
       </div>
       <div class="flight-body">
         <div class="flight-time-block">
@@ -1004,14 +1106,12 @@
       </div>
     </div>
 
-    <div class="layover">
-      <span class="layover-inner">⌛ 上海中轉 · 8 小時 30 分</span>
-    </div>
+    <div class="layover"><span class="layover-inner">⌛ 上海中轉 · 8 小時 30 分</span></div>
 
     <div class="flight">
       <div class="flight-header">
         <div class="flight-code">MU 8639</div>
-        <div class="flight-route-text">上海浦東 — 布達佩斯</div>
+        <div class="flight-route-text">上海浦東 → 布達佩斯</div>
       </div>
       <div class="flight-body">
         <div class="flight-time-block">
@@ -1032,12 +1132,12 @@
       </div>
     </div>
 
-    <h3 class="with-rule" style="margin-top:60px;">回程 <span class="badge badge-back" style="font-size:0.6rem;">2026 · 07 · 25 → 07 · 26</span></h3>
+    <h3 class="with-rule" style="margin-top:60px;">回程 <span class="badge badge-back">2026.07.25 → 07.26</span></h3>
 
     <div class="flight">
       <div class="flight-header">
         <div class="flight-code">MU 8640</div>
-        <div class="flight-route-text">布達佩斯 — 上海浦東</div>
+        <div class="flight-route-text">布達佩斯 → 上海浦東</div>
       </div>
       <div class="flight-body">
         <div class="flight-time-block">
@@ -1058,14 +1158,12 @@
       </div>
     </div>
 
-    <div class="layover">
-      <span class="layover-inner">⌛ 上海中轉 · 6 小時 45 分</span>
-    </div>
+    <div class="layover"><span class="layover-inner">⌛ 上海中轉 · 6 小時 45 分</span></div>
 
     <div class="flight">
       <div class="flight-header">
         <div class="flight-code">MU 5007</div>
-        <div class="flight-route-text">上海浦東 — 台北</div>
+        <div class="flight-route-text">上海浦東 → 台北</div>
       </div>
       <div class="flight-body">
         <div class="flight-time-block">
@@ -1093,16 +1191,16 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ LOUNGE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ LOUNGE ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="lounge">
   <div class="container">
     <header class="section-header">
       <div class="section-num">III.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter Three — A Place of Rest</div>
+        <div class="section-kicker">Chapter Three · A Place of Rest</div>
         <h2 class="section-title">貴賓室權益 <em>Lounge</em></h2>
         <p class="section-lede">
-          東航中轉 3 小時免費貴賓室 — 一份隱藏於票根之中、
+          東航中轉 3 小時免費貴賓室 — 一份藏於票根之中、
           需主動申領的權益。
         </p>
       </div>
@@ -1115,17 +1213,17 @@
           <th>條件</th>
           <th>政策要求</th>
           <th>你的狀況</th>
-          <th style="text-align:center;">符合</th>
+          <th style="text-align:center;width:80px;">符合</th>
         </tr>
       </thead>
       <tbody>
         <tr><td>票本</td><td>781 開頭</td><td>781-2613xxxxx</td><td class="check">✓</td></tr>
         <tr><td>承運</td><td>東上航實際承運</td><td>MU5007/8 · MU8639/40</td><td class="check">✓</td></tr>
         <tr><td>中轉地</td><td>浦東 (PVG)</td><td>上海浦東</td><td class="check">✓</td></tr>
-        <tr><td>行程類型</td><td>國際↔地區/國際聯程</td><td>台北↔上海↔布達佩斯</td><td class="check">✓</td></tr>
+        <tr><td>行程類型</td><td>國際↔國際聯程</td><td>台北↔上海↔布達佩斯</td><td class="check">✓</td></tr>
         <tr><td>單程票價</td><td>≥ RMB 1,200（未稅）</td><td>~ RMB 2,400–3,000</td><td class="check">✓</td></tr>
         <tr><td>中轉時間</td><td>&gt; 3 小時</td><td>8h30m / 6h45m</td><td class="check">✓</td></tr>
-        <tr><td>艙位限制</td><td>非 A/O/X/G 艙</td><td>需查 booking class</td><td class="warn">⚑</td></tr>
+        <tr><td>艙位限制</td><td>非 A/O/X/G 艙</td><td>需查 booking class</td><td class="warn">!</td></tr>
       </tbody>
     </table>
 
@@ -1134,7 +1232,7 @@
     <div class="lounge-card">
       <div class="lounge-num">137</div>
       <div>
-        <div class="lounge-name">G137 國東貴賓室 <em style="font-family:Cormorant Garamond,serif;font-style:italic;color:var(--ink-mute);font-size:1rem;">— Primary</em></div>
+        <div class="lounge-name">G137 國東貴賓室 <em>· Primary</em></div>
         <div class="lounge-loc">S1 衛星廳 · 5F · 137 號登機門旁</div>
       </div>
       <div class="lounge-hours">
@@ -1146,7 +1244,7 @@
     <div class="lounge-card">
       <div class="lounge-num">36</div>
       <div>
-        <div class="lounge-name">No.36 國東貴賓室 <em style="font-family:Cormorant Garamond,serif;font-style:italic;color:var(--ink-mute);font-size:1rem;">— Backup</em></div>
+        <div class="lounge-name">No.36 國東貴賓室 <em>· Backup</em></div>
         <div class="lounge-loc">T1 國際出境主航廈</div>
       </div>
       <div class="lounge-hours">
@@ -1156,9 +1254,9 @@
     </div>
 
     <div class="alert alert-warn">
-      <div class="alert-title">三小時限制 · 3-Hour Window</div>
+      <div class="alert-title">三小時限制 · The 3-Hour Window</div>
       <p style="margin:0;">QR Code 綁定後段航班起飛前 3 小時生效，<strong>單次入場、不可換貴賓室</strong>。</p>
-      <ul style="margin-top:10px;padding-left:24px;color:var(--ink-soft);">
+      <ul>
         <li>去程 02:00 起飛 → 最早 <strong>23:00</strong> 入場</li>
         <li>回程 12:20 起飛 → 最早 <strong>09:20</strong> 入場</li>
       </ul>
@@ -1188,13 +1286,13 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ TRANSIT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ TRANSIT ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="transit">
   <div class="container">
     <header class="section-header">
       <div class="section-num">IV.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter Four — Hours in Transit</div>
+        <div class="section-kicker">Chapter Four · Hours in Transit</div>
         <h2 class="section-title">中轉時間軸 <em>Hours</em></h2>
         <p class="section-lede">
           以時辰為刻度，在浦東度過一夜與一晨 —
@@ -1203,7 +1301,7 @@
       </div>
     </header>
 
-    <h3 class="with-rule">06 · 27 去程 — 8 小時 30 分</h3>
+    <h3 class="with-rule">06.27 去程 · 8 小時 30 分</h3>
 
     <div class="timeline">
       <div class="timeline-item highlight">
@@ -1232,7 +1330,7 @@
       </div>
       <div class="timeline-item highlight">
         <div class="timeline-time">23:00 — 01:30</div>
-        <div class="timeline-text">🛋️ <strong>G137 貴賓室</strong>（晚餐 · 淋浴 · 躺椅 2.5 小時）</div>
+        <div class="timeline-text">🛋️ <strong>G137 貴賓室</strong>（晚餐 · 淋浴 · 躺椅 · 2.5 小時）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">01:30 — 02:00</div>
@@ -1244,7 +1342,7 @@
       </div>
     </div>
 
-    <h3 class="with-rule" style="margin-top:60px;">07 · 26 回程 — 6 小時 45 分</h3>
+    <h3 class="with-rule" style="margin-top:60px;">07.26 回程 · 6 小時 45 分</h3>
 
     <div class="timeline">
       <div class="timeline-item highlight">
@@ -1257,11 +1355,11 @@
       </div>
       <div class="timeline-item">
         <div class="timeline-time">06:30 — 09:20</div>
-        <div class="timeline-text">🪑 S1 衛星廳公共休息區（免費躺椅 / 付費膠囊艙 ¥185 / 3h）</div>
+        <div class="timeline-text">🪑 S1 衛星廳公共休息區（免費躺椅 / 付費膠囊艙 ¥185/3h）</div>
       </div>
       <div class="timeline-item highlight">
         <div class="timeline-time">09:20 — 12:00</div>
-        <div class="timeline-text">🛋️ <strong>G137 貴賓室</strong>（早午餐 · 淋浴 2 小時 40 分）</div>
+        <div class="timeline-text">🛋️ <strong>G137 貴賓室</strong>（早午餐 · 淋浴 · 2 小時 40 分）</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-time">12:00 — 12:20</div>
@@ -1275,13 +1373,13 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ SHANGHAI ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ SHANGHAI ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="shanghai">
   <div class="container">
     <header class="section-header">
       <div class="section-num">V.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter Five — A Detour by the Huangpu</div>
+        <div class="section-kicker">Chapter Five · A Detour by the Huangpu</div>
         <h2 class="section-title">外灘快閃 <em>The Bund</em></h2>
         <p class="section-lede">
           1.5 小時，把握上海夜色 — 不必吃飯，
@@ -1290,18 +1388,18 @@
       </div>
     </header>
 
-    <h3>包車推薦 · KKday #146068 卓伦租车</h3>
+    <h3>包車推薦 · KKday #146068 卓伦租車</h3>
     <table class="data-table">
       <thead>
-        <tr><th>項目</th><th style="text-align:right;">金額 NT$</th></tr>
+        <tr><th>項目</th><th style="text-align:right;width:140px;">金額 NT$</th></tr>
       </thead>
       <tbody>
-        <tr><td>6 小時包車基礎</td><td style="text-align:right;">2,755</td></tr>
-        <tr><td>12 人座小巴升級（8 人需要）</td><td style="text-align:right;">+1,500</td></tr>
-        <tr><td>兒童安全座椅（2 歲）</td><td style="text-align:right;">+615</td></tr>
-        <tr style="background:rgba(184,58,45,.05);font-weight:600;color:var(--ink);">
-          <td style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;">預估總額 · 人均約 NT$ 610</td>
-          <td style="text-align:right;font-family:'Italiana',serif;font-size:1.6rem;color:var(--lantern);">4,870</td>
+        <tr><td>6 小時包車基礎</td><td style="text-align:right;font-family:JetBrains Mono,monospace;">2,755</td></tr>
+        <tr><td>12 人座小巴升級（8 人需要）</td><td style="text-align:right;font-family:JetBrains Mono,monospace;">+1,500</td></tr>
+        <tr><td>兒童安全座椅（2 歲）</td><td style="text-align:right;font-family:JetBrains Mono,monospace;">+615</td></tr>
+        <tr style="background:rgba(168, 54, 42, 0.06);font-weight:600;color:var(--ink);">
+          <td class="serif" style="font-style:italic;font-size:1.1rem;font-weight:500;">預估總額 · 人均約 NT$ 610</td>
+          <td style="text-align:right;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--lantern);font-weight:500;">4,870</td>
         </tr>
       </tbody>
     </table>
@@ -1312,7 +1410,7 @@
     <h3 style="margin-top:50px;">不出去吃 · 回貴賓室用餐</h3>
     <div class="alert alert-success">
       <div class="alert-title">G137 貴賓室自助餐 · 23:00—01:30 供應</div>
-      <ul style="margin-top:10px;padding-left:24px;color:var(--ink-soft);">
+      <ul>
         <li>東航上海炒麵（招牌）</li>
         <li>紅燒肉 · 餃子 · 菜飯</li>
         <li>湯麵 · 餛飩 · 東航那碗麵</li>
@@ -1323,7 +1421,7 @@
 
     <h3 style="margin-top:50px;">必備條件 · Essentials</h3>
     <ul class="checklist">
-      <li><strong>5 年期卡式台胞證</strong> — NT$1,400-1,700 / 人 · 3-5 工作天辦理</li>
+      <li><strong>5 年期卡式台胞證</strong> — NT$1,400–1,700 / 人 · 3–5 工作天辦理</li>
       <li>滴滴出行 App + 微信支付（備用叫車）</li>
       <li>RMB 現金 ~ 3,000 元（餐飲、計程車備用）</li>
       <li>確認 booking class 不是 A/O/X/G 艙</li>
@@ -1331,13 +1429,13 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ CHECKLIST ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ CHECKLIST ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="checklist">
   <div class="container">
     <header class="section-header">
       <div class="section-num">VI.</div>
       <div class="section-meta">
-        <div class="section-kicker">Chapter Six — Before We Go</div>
+        <div class="section-kicker">Chapter Six · Before We Go</div>
         <h2 class="section-title">行前清單 <em>Checklist</em></h2>
         <p class="section-lede">
           凡事豫則立 — 三階段準備事項，
@@ -1346,14 +1444,14 @@
       </div>
     </header>
 
-    <h3 class="with-rule">立刻辦 <span class="badge badge-danger" style="font-size:0.6rem;">4 週前</span></h3>
+    <h3 class="with-rule">立刻辦 <span class="badge badge-danger">4 週前</span></h3>
     <ul class="checklist">
       <li>8 人辦理 <strong>5 年期卡式台胞證</strong></li>
       <li>確認 Trip.com 訂單 booking class 不是 A/O/X/G</li>
       <li>致電東航客服 (02) 7752-7000 確認行李直掛</li>
     </ul>
 
-    <h3 class="with-rule" style="margin-top:50px;">出發前一週 <span class="badge badge-warn" style="font-size:0.6rem;">1 週前</span></h3>
+    <h3 class="with-rule" style="margin-top:50px;">出發前一週 <span class="badge badge-warn">1 週前</span></h3>
     <ul class="checklist">
       <li>下載「東方航空」或「中轉旅客服務通」微信小程序</li>
       <li>領取 16 張貴賓室 QR Code（去回程 ×8 人）</li>
@@ -1364,7 +1462,7 @@
       <li>備齊兒童用品（尿布、嬰兒推車、奶粉）</li>
     </ul>
 
-    <h3 class="with-rule" style="margin-top:50px;">出發前一天 <span class="badge badge-success" style="font-size:0.6rem;">1 天前</span></h3>
+    <h3 class="with-rule" style="margin-top:50px;">出發前一天 <span class="badge badge-success">1 天前</span></h3>
     <ul class="checklist">
       <li>確認 KKday 包車司機聯絡資訊</li>
       <li>檢查護照、台胞證、登機證</li>
@@ -1372,7 +1470,7 @@
       <li>列印此頁面紙本帶在身上</li>
     </ul>
 
-    <h3 class="with-rule" style="margin-top:50px;">TPE 報到時 <span class="badge badge-go" style="font-size:0.6rem;">出發當天</span></h3>
+    <h3 class="with-rule" style="margin-top:50px;">TPE 報到時 <span class="badge badge-go">出發當天</span></h3>
     <ul class="checklist">
       <li>拿到 MU5008 + MU8639 兩段登機證</li>
       <li>行李標籤終點是 <strong>BUD</strong>（不是 PVG）</li>
@@ -1381,13 +1479,13 @@
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="contact">
   <div class="container">
     <header class="section-header">
       <div class="section-num">VII.</div>
       <div class="section-meta">
-        <div class="section-kicker">Coda — In Case of Need</div>
+        <div class="section-kicker">Coda · In Case of Need</div>
         <h2 class="section-title">緊急聯絡 <em>Contacts</em></h2>
       </div>
     </header>
@@ -1397,12 +1495,12 @@
         <h4>東方航空</h4>
         <p>台灣 (02) 7752-7000</p>
         <p>24H +86-95530</p>
-        <p style="margin-top:8px;"><a href="https://tw.ceair.com/" target="_blank">tw.ceair.com</a></p>
+        <p style="margin-top:8px;font-family:Inter,sans-serif;font-size:0.85rem;"><a href="https://tw.ceair.com/" target="_blank">tw.ceair.com</a></p>
       </div>
       <div class="contact-cell">
         <h4>Trip.com 售後</h4>
         <p>(02) 7745-7888</p>
-        <p style="margin-top:8px;"><a href="https://tw.trip.com" target="_blank">tw.trip.com</a></p>
+        <p style="margin-top:8px;font-family:Inter,sans-serif;font-size:0.85rem;"><a href="https://tw.trip.com" target="_blank">tw.trip.com</a></p>
       </div>
       <div class="contact-cell">
         <h4>駐上海台北辦事處</h4>
@@ -1412,21 +1510,21 @@
       <div class="contact-cell">
         <h4>浦東機場</h4>
         <p>+86-21-96990</p>
-        <p style="margin-top:8px;"><a href="https://www.shairport.com/" target="_blank">shairport.com</a></p>
+        <p style="margin-top:8px;font-family:Inter,sans-serif;font-size:0.85rem;"><a href="https://www.shairport.com/" target="_blank">shairport.com</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━ -->
 <footer>
   <div class="container">
     <p class="colophon">
-      <em>Bon voyage et bonne chance —</em><br>
+      <em>Bon voyage et bonne chance</em><br>
       願風為你引路，願星辰為你照明
     </p>
     <div class="divider"></div>
-    <p style="font-family:'Manrope',sans-serif;font-size:0.85rem;letter-spacing:0.08em;opacity:0.75;">
+    <p class="colophon-meta">
       編製於 2026 年 5 月 25 日 · 政策可能變動，出發前請再次確認
     </p>
     <p class="credit">A Companion · Made with Claude Code</p>
